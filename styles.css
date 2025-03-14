@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2em; /* Desktop default */
+}
+
+h2 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5em; /* Desktop default */
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1em; /* Desktop default */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.analysis {
+    line-height: 1.6;
+    color: #333;
+    font-size: 1em; /* Desktop default */
+}
+
+ul.analysis li {
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness (screens <= 768px) */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Smaller on mobile */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Smaller on mobile */
+    }
+
+    th, td {
+        font-size: 0.85em; /* Smaller text on mobile */
+        padding: 8px; /* Reduced padding for compactness */
+    }
+
+    .analysis {
+        font-size: 0.9em; /* Slightly smaller on mobile */
+    }
+
+    /* Ensure table is scrollable horizontally */
+    table {
+        min-width: 600px; /* Forces scrolling if screen is smaller */
+    }
+}
+
+/* Extra Small Screens (e.g., phones <= 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    th, td {
+        font-size: 0.75em; /* Even smaller for tiny screens */
+        padding: 6px;
+    }
+
+    .analysis {
+        font-size: 0.8em;
+    }
+}
