@@ -5,31 +5,30 @@ body {
     padding: 0;
 }
 
-.container {
+.wrapper {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     color: #333;
+    font-size: 2em;
     margin-bottom: 10px;
-    font-size: 2em; /* Desktop default */
 }
 
 h2 {
     color: #555;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 1.5em; /* Desktop default */
+    font-size: 1.5em;
+    margin: 20px 0 10px;
 }
 
-.table-wrapper {
-    overflow-x: auto; /* Enables horizontal scrolling on small screens */
+.table-container {
+    overflow-x: auto;
     margin-bottom: 20px;
 }
 
@@ -42,13 +41,22 @@ th, td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
-    font-size: 1em; /* Desktop default */
-    vertical-align: top; /* Aligns text to top for better spacing with spans */
+    font-size: 1em;
+    vertical-align: top;
 }
 
 th {
     background-color: #4CAF50;
     color: white;
+}
+
+th img {
+    display: block;
+    width: 100%;
+    max-width: 200px; /* Limits image size on desktop */
+    height: auto;
+    margin: 10px auto 0; /* Centers image below text */
+    border-radius: 5px;
 }
 
 tr:nth-child(even) {
@@ -59,56 +67,57 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Style for commentary within cells */
 td span {
     display: block;
-    font-size: 0.85em; /* Smaller than main data */
-    color: #666; /* Gray to distinguish from values */
+    font-size: 0.85em;
+    color: #666;
     font-style: italic;
-    margin-top: 5px; /* Space between value and comment */
+    margin-top: 5px;
 }
 
-.analysis {
-    line-height: 1.6;
+.summary {
     color: #333;
-    font-size: 1em; /* Desktop default */
+    line-height: 1.6;
+    font-size: 1em;
 }
 
-ul.analysis li {
+.summary li {
     margin-bottom: 10px;
 }
 
-/* Mobile Responsiveness (screens <= 768px) */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .container {
+    .wrapper {
         margin: 10px;
         padding: 15px;
     }
 
     h1 {
-        font-size: 1.5em; /* Smaller on mobile */
+        font-size: 1.5em;
     }
 
     h2 {
-        font-size: 1.2em; /* Smaller on mobile */
+        font-size: 1.2em;
     }
 
     th, td {
-        font-size: 0.85em; /* Smaller text on mobile */
-        padding: 8px; /* Reduced padding for compactness */
+        font-size: 0.85em;
+        padding: 8px;
+    }
+
+    th img {
+        max-width: 150px; /* Smaller images on tablets */
     }
 
     td span {
-        font-size: 0.75em; /* Even smaller commentary on mobile */
+        font-size: 0.75em;
     }
 
-    /* Ensure table is scrollable horizontally */
     table {
-        min-width: 600px; /* Forces scrolling if screen is smaller */
+        min-width: 600px;
     }
 }
 
-/* Extra Small Screens (e.g., phones <= 480px) */
 @media (max-width: 480px) {
     h1 {
         font-size: 1.2em;
@@ -119,11 +128,15 @@ ul.analysis li {
     }
 
     th, td {
-        font-size: 0.75em; /* Even smaller for tiny screens */
+        font-size: 0.75em;
         padding: 6px;
     }
 
+    th img {
+        max-width: 100px; /* Even smaller on phones */
+    }
+
     td span {
-        font-size: 0.65em; /* Tiny commentary for small screens */
+        font-size: 0.65em;
     }
 }
