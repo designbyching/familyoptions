@@ -50,13 +50,41 @@ th {
     color: white;
 }
 
-th img {
-    display: block;
+/* City header cells with background images */
+th.city-header {
+    position: relative;
+    text-align: center;
+    padding: 0; /* Remove padding to control size with aspect ratio */
+    height: 0; /* Collapse height, use padding for ratio */
+    padding-bottom: 66.67%; /* 2/3 (3:2 ratio flipped) for height relative to width */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Better readability on image */
+}
+
+/* Specific background images for each city */
+th.city-header:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1592906209472-a36b1f3782ef?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* New Prague image */
+}
+
+th.city-header:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1518138793089-8eaa76c44db9?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* New Perth image */
+}
+
+th.city-header:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80'); /* Sydney unchanged */
+}
+
+/* Center the city name text vertically and horizontally */
+th.city-header span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 200px; /* Limits image size on desktop */
-    height: auto;
-    margin: 10px auto 0; /* Centers image below text */
-    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 tr:nth-child(even) {
@@ -105,8 +133,8 @@ td span {
         padding: 8px;
     }
 
-    th img {
-        max-width: 150px; /* Smaller images on tablets */
+    th.city-header {
+        padding-bottom: 66.67%; /* Maintain 3:2 ratio */
     }
 
     td span {
@@ -132,8 +160,8 @@ td span {
         padding: 6px;
     }
 
-    th img {
-        max-width: 100px; /* Even smaller on phones */
+    th.city-header {
+        padding-bottom: 66.67%; /* Maintain 3:2 ratio */
     }
 
     td span {
