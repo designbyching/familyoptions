@@ -49,7 +49,7 @@ th, td {
 th.category-header {
     position: relative;
     text-align: center;
-    padding: 20px 0 0 0; /* Match city-header padding to align text */
+    padding: 20px 0 0 0; /* Match city-header padding */
     height: 0;
     padding-bottom: 66.67%; /* 3:2 ratio */
     background-image: url('https://images.unsplash.com/photo-1579724984996-c2d12999e8f6?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -59,14 +59,12 @@ th.category-header {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
+/* Remove unnecessary span styling for category */
 th.category-header span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+    position: static; /* Reset from absolute */
+    transform: none; /* Remove centering transform */
+    padding: 0; /* No extra padding */
+    display: block; /* Keep it simple */
 }
 
 /* City header cells with background images */
@@ -153,7 +151,7 @@ td span {
     }
 
     th.city-header {
-        padding: 15px 0 0 0; /* Slightly less top padding on smaller screens */
+        padding: 15px 0 0 0;
         padding-bottom: 66.67%;
     }
 
@@ -186,7 +184,7 @@ td span {
     }
 
     th.city-header {
-        padding: 10px 0 0 0; /* Further reduced top padding */
+        padding: 10px 0 0 0;
         padding-bottom: 66.67%;
     }
 
